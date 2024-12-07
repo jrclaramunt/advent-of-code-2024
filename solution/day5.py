@@ -31,15 +31,12 @@ class Day5(Day):
             add = False
             for i in range(len(update) - 1):
                 if update[i + 1] not in self.rules[update[i]]:
-                    tmp = update[i + 1]
-                    update[i + 1] = update[i]
-                    update[i] = tmp
                     add = True
                     break
             if add:
                 wrong_updates.append(update)
 
-        return self.valid_updates_calculation(wrong_updates)
+        pass
 
     def valid_updates_calculation(self, updates):
         total = 0
